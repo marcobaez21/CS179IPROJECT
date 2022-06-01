@@ -45,3 +45,8 @@ wget http://cnrpark.it/models/CNRPark+EXT_Trained_Models_mAlexNet.zip
 sudo apt-get install unzip
 
 unzip CNRPark+EXT_Trained_Models_mAlexNet.zip
+
+
+
+# (Sources)
+Client and Server Python files were heavily based on code given to us by our TA Aditya and this source (https://www.thepythoncode.com/article/send-receive-files-using-sockets-python)
