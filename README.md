@@ -14,7 +14,7 @@ vim Dockerfile (then copy all contents of my dockerfile)
 
 docker build -t mydocker .
 
-docker run -ti -p 8080:8080 mydocker
+docker run -it -p 8080:8080 mydocker
 
 cd ../..
 
