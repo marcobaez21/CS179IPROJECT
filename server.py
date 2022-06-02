@@ -5,6 +5,7 @@ import pyffe
 from pyffe.models import mAlexNet
 import caffe
 import numpy as np
+from scipy.misc import imresize
 # device's IP address
 SERVER_HOST = "0.0.0.0"
 SERVER_PORT = 8080
