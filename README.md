@@ -42,7 +42,9 @@ cd deep-parking
 
 wget http://cnrpark.it/models/CNRPark+EXT_Trained_Models_mAlexNet.zip
 
-sudo apt-get install unzip
+apt-get update
+
+apt-get install unzip
 
 unzip CNRPark+EXT_Trained_Models_mAlexNet.zip
 
