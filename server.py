@@ -60,3 +60,9 @@ print("Predicted class is #{}.".format(out))
 client_socket.close()
 # close the server socket
 s.close()
+host = '128.110.218.214'
+port=8080
+s=socket.socket()
+s.connect((host,port))
+s.send(msg.encode())
+s.close()
