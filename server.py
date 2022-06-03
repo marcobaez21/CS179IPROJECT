@@ -56,6 +56,7 @@ imageData = np.asarray([img.transpose(2, 1, 0)])
 imageData = np.divide(imageData, 255.0)
 out = net.forward_all(data=imageData)
 print("Predicted class is #{}.".format(out))
+msg=("Predicted class is #{}.".format(out))
 # close the client socket
 client_socket.close()
 # close the server socket
