@@ -38,8 +38,8 @@ with open(filename, "wb") as f:
         f.write(bytes_read)
         # update the progress bar
         progress.update(len(bytes_read))
-msg='Thank You!'
-client_socket.send(msg.encode())
+#msg='Thank You!'
+#client_socket.send(msg.encode())
 input_format = pyffe.InputFormat(
     new_width=256,
     new_height=256,
