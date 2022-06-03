@@ -49,7 +49,7 @@ input_format = pyffe.InputFormat(
 )
 caffe.set_mode_cpu()
 net = caffe.Net("mAlexNet-on-PKLot_train-val-PKLot_val/deploy.prototxt", "mAlexNet-on-PKLot_train-val-PKLot_val/snapshot_iter_6318.caffemodel", caffe.TEST)
-img = caffe.io.load_image('./porsche.jpg')
+img = caffe.io.load_image(filename)
 img = imresize(img, [224, 224])
 img = img.astype(np.uint8)
 imageData = np.asarray([img.transpose(2, 1, 0)])
