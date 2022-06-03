@@ -69,6 +69,8 @@ pip install protobuf
 
 apt-get install python-tk
 
+(Change the IP Address to the IP of the client on line 64 of server.py)
+
 python server.py
 
 # CLIENT INSTRUCTIONS
@@ -83,6 +85,8 @@ sudo apt-get install python-pip
 pip install tqdm
 
 vim client.py (and copy my client.py file)
+
+(Change IP address to IP of server on line 8 of client.py)
 
 python client.py 
 
