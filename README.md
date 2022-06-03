@@ -69,4 +69,4 @@ apt-get install python-tk
 python server.py
 
 # (Sources)
-Client and Server Python files were heavily based on code given to us by our TA Aditya and this source (https://www.thepythoncode.com/article/send-receive-files-using-sockets-python)
+Client and Server Python files were heavily based on code given to us by our TA Aditya, our Mentor Shixiong, and this source (https://www.thepythoncode.com/article/send-receive-files-using-sockets-python)
