@@ -9,7 +9,7 @@ host = "128.110.218.224"
 # the port, let's use 5001
 port = 8080
 # the name of file we want to send, make sure it exists
-filename = "porsche.jpg"
+filename = raw_input("Enter Picture name: ")
 # get the file size
 filesize = os.path.getsize(filename)
 # create the client socket
@@ -42,4 +42,17 @@ with open(filename, "rb") as f:
 #while data:
  #   print(data.decode())
 
+s.close()
+s=socket.socket()
+otherhost = '0.0.0.0'
+s.bind((otherhost, port))
+s.listen(5)
+
+print(host)
+while True:
+    conn, addr = s.accept()
+    print('Got connection from', addr)
+    data = conn.recv(1024)
+    print('Server received', repr(data.decode()))
+    conn.close()
 s.close()
