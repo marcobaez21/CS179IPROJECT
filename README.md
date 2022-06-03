@@ -1,5 +1,8 @@
 # CS179IPROJECT
 
+
+# SERVER INSTRUCTIONS
+
 SSH into Clouldlab node that will act as server:
 
 sudo apt-get update 
@@ -67,6 +70,20 @@ pip install protobuf
 apt-get install python-tk
 
 python server.py
+
+# CLIENT INSTRUCTIONS
+
+SSH into Clouldlab node that will act as client:
+
+sudo apt-get update
+
+sudo apt-get insall vim
+
+pip install tqdm
+
+vim client.py (and copy my client.py file)
+
+python client.py 
 
 # (Sources)
 Client and Server Python files were heavily based on code given to us by our TA Aditya, our Mentor Shixiong, and this source (https://www.thepythoncode.com/article/send-receive-files-using-sockets-python)
