@@ -78,6 +78,7 @@ SSH into Clouldlab node that will act as client:
 sudo apt-get update
 
 sudo apt-get insall vim
+sudo apt-get install python-pip
 
 pip install tqdm
 
