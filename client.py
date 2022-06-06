@@ -5,7 +5,7 @@ import os
 SEPARATOR = "<SEPARATOR>"
 BUFFER_SIZE = 4096 # send 4096 bytes each time step
 # the ip address or hostname of the server, the receiver
-host = "128.110.218.224"
+host = "128.110.218.76"
 # the port, let's use 5001
 port = 8080
 # the name of file we want to send, make sure it exists
@@ -28,20 +28,22 @@ with open(filename, "rb") as f:
         # read the bytes from the file
         bytes_read = f.read(BUFFER_SIZE)
         if not bytes_read:
-            # file transmitting is done
-            break
+                 # file transmitting is done
+                 break
         # we use sendall to assure transimission in
         # busy networks
         s.sendall(bytes_read)
         # update the progress bar
         progress.update(len(bytes_read))
- #       received = s.recv(BUFFER_SIZE).decode()
-  #      print(data.decode())
+        #       received = s.recv(BUFFER_SIZE).decode()
+        #       print(data.decode())
 # close the socket
 #received = s.recv(BUFFER_SIZE).decode()
 #while data:
- #   print(data.decode())
-
+#   print(data.decode())
+progress.update(len(bytes_read))
+progress.refresh()
+progress.close()
 s.close()
 s=socket.socket()
 otherhost = '0.0.0.0'
@@ -49,10 +51,9 @@ s.bind((otherhost, port))
 s.listen(5)
 
 print(host)
-while True:
-    conn, addr = s.accept()
-    print('Got connection from', addr)
-    data = conn.recv(1024)
-    print('Server received', repr(data.decode()))
-    conn.close()
+conn, addr = s.accept()
+print('Got connection from', addr)
+data = conn.recv(1024)
+print('Server received', repr(data.decode()))
+conn.close()
 s.close()
